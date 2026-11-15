@@ -1,0 +1,4 @@
+code,parent_code,level,name
+S,,System,Fictional System
+SS,S,Subsystem,Fictional Assembly
+P-1,SS,Equipment,Pump Unit P-1

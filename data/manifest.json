@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "seed": 20261114,
+  "as_of_date": "2026-11-14",
+  "systems": 15,
+  "subsystems": 50,
+  "equipment": 300,
+  "baseline_documents": 3000,
+  "document_count": 3008,
+  "injection_events": 160,
+  "expected_findings": 216,
+  "errors_per_type": 8,
+  "note": "Fictional generated metadata only; no real drawings, files, ship or company data."
+}

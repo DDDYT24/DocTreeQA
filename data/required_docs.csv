@@ -1,0 +1,14 @@
+equipment_class,doc_type
+pump,manual
+pump,datasheet
+pump,test_report
+motor,manual
+motor,datasheet
+motor,test_report
+valve,manual
+valve,datasheet
+bearing,datasheet
+bearing,spares_list
+panel,manual
+panel,datasheet
+panel,spares_list

@@ -1,0 +1,17 @@
+row_id,doc_id,field,before,after,reason
+ROW-000318,SYN-000318,title,  Bearing Unit 330-01-02 drawing  ,Bearing Unit 330-01-02 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000318,SYN-000318,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000398,SYN-000398,title,  Panel Unit 340-02-02 drawing  ,Panel Unit 340-02-02 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000398,SYN-000398,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000413,SYN-000413,title,  Valve Unit 220-03-02 drawing  ,Valve Unit 220-03-02 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000413,SYN-000413,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000418,SYN-000418,title,  Bearing Unit 230-03-02 drawing  ,Bearing Unit 230-03-02 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000418,SYN-000418,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000528,SYN-000528,title,  Pump Unit 250-01-03 drawing  ,Pump Unit 250-01-03 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-000528,SYN-000528,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-001063,SYN-001063,title,  Valve Unit 320-01-05 drawing  ,Valve Unit 320-01-05 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-001063,SYN-001063,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-001083,SYN-001083,title,  Motor Unit 210-02-05 drawing  ,Motor Unit 210-02-05 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-001083,SYN-001083,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-001438,SYN-001438,title,  Valve Unit 270-03-06 drawing  ,Valve Unit 270-03-06 drawing,Trim surrounding whitespace; lowercase doc_type only
+ROW-001438,SYN-001438,doc_type, DRAWING ,drawing,Trim surrounding whitespace; lowercase doc_type only

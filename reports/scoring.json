@@ -1,0 +1,324 @@
+{
+  "synthetic": true,
+  "method": "Exact match on (rule, entity_type, entity_id), unique findings; no true negatives",
+  "caveat": "Scores measure recovery of controlled synthetic faults, including logged cascades. Near-title scores measure candidate retrieval, not verified duplicate content. Rules with no injected examples have null recall, not perfect recall.",
+  "overall": {
+    "true_positives": 216,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "support": 216,
+    "predictions": 216,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "per_rule": {
+    "ambiguous_equipment": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "duplicate_doc_id": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "duplicate_file": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "exact_duplicate": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "filename_mismatch": {
+      "true_positives": 16,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 16,
+      "predictions": 16,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "future_date": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "invalid_date": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "invalid_doc_type": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "invalid_page_count": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "invalid_revision": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "invalid_status": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "missing_doc_id": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "missing_doc_type": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "missing_file_name": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "missing_issue_date": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "missing_page_count": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "missing_required": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "missing_revision": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "missing_status": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "missing_title": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "multiple_issued": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "near_duplicate_title": {
+      "true_positives": 16,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 16,
+      "predictions": 16,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "safe_normalization": {
+      "true_positives": 16,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 16,
+      "predictions": 16,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "superseded_without_replacement": {
+      "true_positives": 40,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 40,
+      "predictions": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "tree_cycle": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "tree_duplicate_code": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "tree_invalid_parent": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "tree_level": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "tree_missing_code": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "tree_missing_name": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "unknown_equipment": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "unknown_equipment_class": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 0,
+      "predictions": 0,
+      "precision": null,
+      "recall": null
+    },
+    "unmapped_document": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "wrong_mapping_level": {
+      "true_positives": 8,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "support": 8,
+      "predictions": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "false_positives": [],
+  "false_negatives": []
+}

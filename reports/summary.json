@@ -1,0 +1,59 @@
+{
+  "synthetic": true,
+  "seed": 20261114,
+  "as_of_date": "2026-11-14",
+  "python_version": "3.11.18",
+  "document_count": 3008,
+  "equipment_count": 300,
+  "node_count": 365,
+  "system_count": 15,
+  "subsystem_count": 50,
+  "issue_count": 200,
+  "issues_per_rule": {
+    "duplicate_doc_id": 8,
+    "duplicate_file": 8,
+    "exact_duplicate": 8,
+    "filename_mismatch": 16,
+    "future_date": 8,
+    "invalid_date": 8,
+    "invalid_doc_type": 8,
+    "invalid_page_count": 8,
+    "invalid_revision": 8,
+    "invalid_status": 8,
+    "missing_required": 8,
+    "missing_revision": 8,
+    "missing_title": 8,
+    "multiple_issued": 8,
+    "near_duplicate_title": 16,
+    "superseded_without_replacement": 40,
+    "unknown_equipment": 8,
+    "unmapped_document": 8,
+    "wrong_mapping_level": 8
+  },
+  "issues_per_severity": {
+    "error": 168,
+    "warning": 32
+  },
+  "change_count": 16,
+  "manual_review_count": 200,
+  "completeness": {
+    "required_count": 780,
+    "present_count": 772,
+    "missing_count": 8,
+    "completeness_pct": 98.9744,
+    "trustworthy_tree": true,
+    "basis": "Required type coverage by mapped issued metadata records only"
+  },
+  "row_ids_from_source": true,
+  "title_similarity_threshold": 0.93,
+  "filename_template": "{doc_id}_R{revision}.pdf",
+  "input_sha256": {
+    "equipment_tree.csv": "af7b0b2620f550b6829d5211470f00395b2f41823139cbe98d99ad12edcc4ad6",
+    "document_register.csv": "a75e39038f15d3745c33296dc89badbfb060bc597c7cc02b0bd74aad2b1f6625",
+    "required_docs.csv": "f1b4f986f913fbb13b422093eb19c21e1d1462d904d1a664a575258e3c14ab7c",
+    "injected_errors.csv": "793b8b1487525b9984553232d0baf621eefd360dfcae5a1553804c464a25aeb7"
+  },
+  "scoring_available": true,
+  "runtime_seconds": 0.065777,
+  "runtime_scope": "Input load, detection, CSV export and scoring; excludes summary write"
+}

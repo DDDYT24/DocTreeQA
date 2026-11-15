@@ -1,0 +1,83 @@
+{
+  "milestones": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "m3_status": "Module implemented; static syntax passed; Windows Excel acceptance pending",
+  "m4_status": "Documentation and local handoff prepared; publication and hosted CI pending",
+  "python_version": "3.11.18",
+  "pytest": {
+    "tests": 160,
+    "passed": 160,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source": "reports/pytest-results.xml"
+  },
+  "local_checks": [
+    "ruff check .",
+    "ruff format --check .",
+    "pytest"
+  ],
+  "remote_ci_status": {
+    "status": "not_started",
+    "conclusion": null,
+    "run_url": null,
+    "head_sha": null,
+    "reason": "Prepared source has not been pushed; no hosted workflow has run for it",
+    "local_checks": "Ruff and pytest passed; see the saved local logs and test XML"
+  },
+  "publication": {
+    "status": "repository_ready",
+    "repository": "DDDYT24/DocTreeQA",
+    "repository_url": "https://github.com/DDDYT24/DocTreeQA",
+    "visibility": "PUBLIC",
+    "repository_created": true,
+    "source_pushed": false,
+    "default_branch": "main"
+  },
+  "workbook": {
+    "synthetic": true,
+    "workbook": "doctree_report.xlsx",
+    "workbook_sha256": "a54e040c2c0670e49880967cc71ab823ae7a1d80fbaf85a104c9b669b5777beb",
+    "header_row": 5,
+    "data_rows": {
+      "Summary": null,
+      "Issues": 200,
+      "Completeness": 365,
+      "Manual Review": 200,
+      "Change Log": 16
+    },
+    "table_rows": {
+      "SummaryMetrics": 16,
+      "RuleMetrics": 34,
+      "IssuesTable": 200,
+      "CompletenessTable": 365,
+      "ManualReviewTable": 200,
+      "ChangeLogTable": 16
+    },
+    "source_sha256": {
+      "summary.json": "cf61765cb28994157fdad5fe8b81dd47035ef340c9967180f7a3a7593b1a3548",
+      "issues.csv": "d2b55c1767c1816e587497711740bb6f53ba29ba7f3fa19b4838effd36e932f1",
+      "manual_review.csv": "8f9b1fa10d6e58da8cea1473f6bebdac246e930a89ecfa2de85c07673de69b2d",
+      "completeness.csv": "961a12252c63534bff824e9a21923bdb86d175e3ca509626847df415757310ff",
+      "change_log.csv": "471975b9ab532c53cd0fff4b8f0a05d60805e39d85911b8e93b708eb87ea6a43",
+      "scoring.json": "64cb8f9954321f0e6ab3da3a77b5eb9de66567636faa2ffb5db8df6d2664a509"
+    },
+    "vba_included": false,
+    "vba_execution_status": "Not run; Windows Excel validation required",
+    "review_semantics": {
+      "Accepted": "Open",
+      "Rejected": "Dismissed"
+    }
+  },
+  "vba_syntax_status": "passed",
+  "vba_runtime_status": "Not run; Windows Excel acceptance pending",
+  "incomplete": [
+    "Windows Excel verification",
+    "Windows Excel macro screenshots",
+    "Public GitHub publication",
+    "Hosted GitHub Actions verification"
+  ]
+}

@@ -1,0 +1,5 @@
+row_id,doc_id,title,doc_type,equipment_code,revision,status,issue_date,file_name,page_count
+ROW-1,SYN-M,Pump Unit P-1 manual,manual,P-1,1,superseded,2025-01-01,SYN-M_R1.pdf,12
+ROW-2,SYN-M,Pump Unit P-1 manual,manual,P-1,2,issued,2026-01-01,SYN-M_R2.pdf,14
+ROW-3,SYN-D,Pump Unit P-1 datasheet,datasheet,P-1,1,issued,2026-01-01,SYN-D_R1.pdf,2
+ROW-4,SYN-T,Pump Unit P-1 test report,test_report,P-1,1,issued,2026-01-01,SYN-T_R1.pdf,4

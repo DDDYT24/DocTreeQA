@@ -1,0 +1,9 @@
+{
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 Calc PDF export, pdftoppm PNG",
+  "workbook_sha256": "a54e040c2c0670e49880967cc71ab823ae7a1d80fbaf85a104c9b669b5777beb",
+  "preview": "docs/screenshots/summary_cloud_preview.png",
+  "preview_sha256": "629b5e16fca763fd3fbdec83658e1e45e39856618d3899ae7c128d6b0bc09448",
+  "windows_excel_screenshot": false,
+  "vba_execution_evidence": false,
+  "layout_review": "Summary preview inspected; labels, values and percentages are readable"
+}

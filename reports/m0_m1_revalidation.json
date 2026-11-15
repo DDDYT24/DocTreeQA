@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "input_hashes_match": true,
+  "scoring_independently_recomputed": true,
+  "change_log_replays_exactly": true,
+  "issue_count": 200,
+  "change_count": 16,
+  "expected_findings": 216,
+  "false_positives": 0,
+  "false_negatives": 0
+}

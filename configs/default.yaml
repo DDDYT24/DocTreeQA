@@ -1,0 +1,23 @@
+seed: 20261114
+as_of_date: '2026-11-14'
+generation:
+  systems: 15
+  subsystems: 50
+  equipment: 300
+  documents: 3000
+  errors_per_type: 8
+validation:
+  title_similarity_threshold: 0.93
+  filename_template: '{doc_id}_R{revision}.pdf'
+  doc_types: [manual, datasheet, drawing, test_report, spares_list]
+  statuses: [draft, issued, superseded]
+  # The first word in an equipment name identifies its synthetic class.
+  required_by_class:
+    pump: [manual, datasheet, test_report]
+    motor: [manual, datasheet, test_report]
+    valve: [manual, datasheet]
+    bearing: [datasheet, spares_list]
+    panel: [manual, datasheet, spares_list]
+paths:
+  data_dir: data
+  reports_dir: reports
