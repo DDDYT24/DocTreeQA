@@ -1,5 +1,7 @@
 # DocTreeQA
 
+[![checks](https://github.com/DDDYT24/DocTreeQA/actions/workflows/ci.yml/badge.svg)](https://github.com/DDDYT24/DocTreeQA/actions/workflows/ci.yml)
+
 DocTreeQA checks a technical document register against an equipment hierarchy.
 It identifies metadata errors, mapping problems and gaps in required document
 types, then saves findings for a human reviewer.
@@ -177,8 +179,8 @@ actual exported workbook. They do not execute macros. Optional syntax validation
 is described in [the validation notes](docs/validation.md).
 
 The GitHub Actions workflow uses the locked dependencies and runs lint,
-formatting and pytest on pushes and pull requests. Local checks pass; hosted CI
-is verified after publication. Saved status records are listed in
+formatting and pytest on pushes and pull requests. Local checks and the saved
+hosted run have passed. The badge links to current workflow results. Saved status records are listed in
 [publication status](reports/publication.json) and [CI status](reports/ci_status.json).
 The remaining publication step is described in [the publishing guide](docs/publish.md).
 

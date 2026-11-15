@@ -1,9 +1,10 @@
 {
-  "status": "repository_ready",
+  "status": "published",
   "repository": "DDDYT24/DocTreeQA",
   "repository_url": "https://github.com/DDDYT24/DocTreeQA",
   "visibility": "PUBLIC",
   "repository_created": true,
-  "source_pushed": false,
-  "default_branch": "main"
+  "source_pushed": true,
+  "default_branch": "main",
+  "first_published_commit": "28949e8fe722dbf5bcdda870b99787cab3bd1496"
 }

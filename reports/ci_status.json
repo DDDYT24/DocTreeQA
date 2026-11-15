@@ -1,8 +1,21 @@
 {
-  "status": "not_started",
-  "conclusion": null,
-  "run_url": null,
-  "head_sha": null,
-  "reason": "Prepared source has not been pushed; no hosted workflow has run for it",
-  "local_checks": "Ruff and pytest passed; see the saved local logs and test XML"
+  "status": "completed",
+  "conclusion": "success",
+  "workflow": "checks",
+  "event": "push",
+  "branch": "main",
+  "head_sha": "28949e8fe722dbf5bcdda870b99787cab3bd1496",
+  "run_id": 43760482064,
+  "run_url": "https://github.com/DDDYT24/DocTreeQA/actions/runs/43760482064",
+  "job_id": 132953941726,
+  "pytest": {
+    "passed": 160,
+    "runtime_seconds": 11.8
+  },
+  "checks": [
+    "ruff check .",
+    "ruff format --check .",
+    "pytest"
+  ],
+  "scope": "Python tests and static workbook contracts; Windows Excel macros are not executed"
 }
