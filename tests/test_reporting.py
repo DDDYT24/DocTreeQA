@@ -50,7 +50,14 @@ def test_workbook_sheets_tables_counts_and_source_values(config):
     for ws in wb:
         assert "SYNTHETIC" in ws["A2"].value
         assert ws.freeze_panes
+        assert ws["A1"].font.color.rgb == "00000000"
+        assert ws["A1"].fill.fgColor.rgb == "00FFFFFF"
+        assert ws["A5"].font.color.rgb == "00000000"
+        assert ws["A5"].border.bottom.style == "thin"
+        assert ws["A5"].border.bottom.color.rgb == "00000000"
         for table in ws.tables.values():
+            assert table.tableStyleInfo.name == "TableStyleLight1"
+            assert table.tableStyleInfo.showRowStripes is False
             assert manifest["table_rows"][table.displayName] == len(list(ws[table.ref])) - 1
     saved = json.loads((config.reports_dir / "summary.json").read_text())
     metrics = {r["metric"]: r["value"] for r in records(wb["Summary"], "SummaryMetrics")}

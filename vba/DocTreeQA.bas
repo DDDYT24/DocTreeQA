@@ -83,10 +83,16 @@ Public Sub HighlightIssues()
         Select Case LCase$(Trim$(FieldText(entry, "severity")))
             Case "error": color = RGB(252, 228, 214)
             Case "warning": color = RGB(255, 242, 204)
-            Case "info": color = RGB(221, 235, 247)
+            Case "info": color = RGB(231, 230, 230)
             Case Else: color = RGB(255, 255, 255)
         End Select
         entry.Range.Interior.Color = color
+        entry.Range.Font.Color = RGB(0, 0, 0)
+        With entry.Range.Borders
+            .LineStyle = xlContinuous
+            .Color = RGB(0, 0, 0)
+            .Weight = xlThin
+        End With
     Next entry
     Application.ScreenUpdating = oldScreen
     MsgBox "Issue rows coloured by severity; filter arrows are enabled.", vbInformation, "DocTreeQA"
@@ -182,8 +188,13 @@ Public Sub BuildSystemSummary()
     WriteText ws.Range("A1"), SUMMARY_TITLE
     ws.Range("A1").Font.Size = 20
     ws.Range("A1").Font.Bold = True
-    ws.Range("A1").Font.Color = RGB(255, 255, 255)
-    ws.Range("A1:G1").Interior.Color = RGB(24, 53, 74)
+    ws.Range("A1").Font.Color = RGB(0, 0, 0)
+    ws.Range("A1:G1").Interior.Color = RGB(255, 255, 255)
+    With ws.Range("A1:G1").Borders
+        .LineStyle = xlContinuous
+        .Color = RGB(0, 0, 0)
+        .Weight = xlThin
+    End With
     ws.Rows(1).RowHeight = 36
     ws.Range("A2:G2").Merge
     WriteText ws.Range("A2"), "SYNTHETIC DATA ONLY | Fictional metadata; no real ship or Seaspan data"
@@ -206,7 +217,19 @@ Public Sub BuildSystemSummary()
     Next key
     Set outputTable = ws.ListObjects.Add(xlSrcRange, ws.Range("A5:G" & (outputRow - 1)), , xlYes)
     outputTable.Name = "SystemSummaryTable"
-    outputTable.TableStyle = "TableStyleMedium2"
+    outputTable.TableStyle = ""
+    outputTable.ShowTableStyleRowStripes = False
+    outputTable.Range.Font.Name = "Calibri"
+    outputTable.Range.Font.Size = 11
+    outputTable.Range.Font.Color = RGB(0, 0, 0)
+    outputTable.Range.Interior.Color = RGB(255, 255, 255)
+    outputTable.HeaderRowRange.Interior.Color = RGB(242, 242, 242)
+    outputTable.HeaderRowRange.Font.Bold = True
+    With outputTable.Range.Borders
+        .LineStyle = xlContinuous
+        .Color = RGB(0, 0, 0)
+        .Weight = xlThin
+    End With
     WriteText ws.Cells(outputRow + 1, 1), "TOTAL OPEN"
     ws.Cells(outputRow + 1, 7).Value2 = total
     ws.Rows(outputRow + 1).Font.Bold = True

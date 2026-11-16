@@ -1,7 +1,7 @@
 {
   "syntax_errors": 0,
   "status": "passed",
-  "module_sha256": "1df2bf0301f42a1b796375dd20608f8cda9334f2376960e1bb1c3bba721a4f78",
+  "module_sha256": "7bc5442e1bcf0e9ab5e899d42c4bca5fa65acd3f7b84aec73b6199d938b8bac8",
   "parser": "ANTLR 4.13.2; grammars-v4 VBA 7.1 startRule",
   "grammar_repository": "https://github.com/antlr/grammars-v4/tree/master/vba/vba7_1",
   "grammar_blobs": {

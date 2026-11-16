@@ -48,10 +48,16 @@ dismissed on rejection, and the open total remained 199 after reopening.
 See `windows_acceptance.md` and `reports/windows_excel_acceptance.json`.
 
 The session was performed by the user, not in Python CI or this environment.
-The reviewed workbook binary and original image files were not supplied as
-workspace files. Additional selection and cancellation cases were reported
-successful overall but were not individually itemized. No stronger automated
-runtime or binary inspection claim is made.
+The reviewed workbook binary was subsequently supplied and inspected. Its
+saved decisions, statuses, audit rows and per-System counts match the reported
+session. The embedded module was extracted and compared with the tested source.
+Additional selection and cancellation cases were reported successful overall
+but were not individually itemized. This inspection did not execute VBA.
+
+The current module's presentation-only changes were checked against that source:
+MarkReviewed and the System counting code remain unchanged. The revised style
+was syntax checked and rendered; a new Windows run is not claimed. See
+`reports/module_style_validation.json` and `docs/update_review_module.md`.
 
 Python reference counts remain expectations, while the separately recorded
 Windows observations describe the actual reported session. The syntax check

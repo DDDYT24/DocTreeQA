@@ -1,0 +1,22 @@
+{
+  "tested_source_commit": "7a0083b974e407d110ff8fb59ec6ece016319d6e",
+  "current_module_sha256": "7bc5442e1bcf0e9ab5e899d42c4bca5fa65acd3f7b84aec73b6199d938b8bac8",
+  "changed_procedures": [
+    "HighlightIssues",
+    "BuildSystemSummary"
+  ],
+  "unchanged_procedures": [
+    "GetTable",
+    "RequireColumns",
+    "FieldCell",
+    "CellText",
+    "FieldText",
+    "FindingKey",
+    "WriteText",
+    "StageChange",
+    "MarkReviewed"
+  ],
+  "system_counting_prefix_unchanged": true,
+  "mark_reviewed_source_sha256": "dea60ce6f50eee0b542472313fb15363a8641922144764477234376cb0d3b7d5",
+  "scope": "Presentation-only source changes; no new Windows execution claimed"
+}

@@ -1,9 +1,10 @@
 {
   "renderer": "LibreOfficeDev 26.8.0.0.alpha0 Calc PDF export, pdftoppm PNG",
-  "workbook_sha256": "60988acfe0b9959609ae8d6ecd4c3bc34ee5aa6bcc4e2d1312150acc32cc952d",
+  "workbook_sha256": "bbecebc4ad34a54c0b4fbafda0edfd03ce5ac5f4cb9e825bb744b44d87a4df04",
   "preview": "docs/screenshots/summary_cloud_preview.png",
-  "preview_sha256": "ec3ee3ab5f8f603b4f99a4dba6fea9e3bdefab291cf8b614cbc981666fd3193e",
+  "preview_sha256": "bb7289e6978511a798abd09f1574b900d039c5bcc2698373a30facaf55f5c216",
   "windows_excel_screenshot": false,
   "vba_execution_evidence": false,
-  "layout_review": "Summary preview inspected; labels, values and percentages are readable"
+  "layout_review": "Summary preview inspected; labels, values and percentages are readable",
+  "style": "Plain white and black bordered tables"
 }

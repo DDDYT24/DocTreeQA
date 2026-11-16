@@ -1,7 +1,7 @@
 {
   "synthetic": true,
   "meaning": "Python expectations for manual Windows Excel tests; not VBA execution evidence",
-  "workbook_sha256": "60988acfe0b9959609ae8d6ecd4c3bc34ee5aa6bcc4e2d1312150acc32cc952d",
+  "workbook_sha256": "bbecebc4ad34a54c0b4fbafda0edfd03ce5ac5f4cb9e825bb744b44d87a4df04",
   "initial_open_findings": 200,
   "initial_system_rows": 16,
   "initial_unmapped_open": 16,
@@ -17,7 +17,7 @@
   "expected_severity_colours": {
     "error": "FCE4D6",
     "warning": "FFF2CC",
-    "info": "DDEBF7"
+    "info": "E7E6E6"
   },
   "vba_runtime_status": "Not run by this reference generator; observed runtime evidence is separate"
 }

@@ -6,7 +6,7 @@
     "M3",
     "M4"
   ],
-  "m3_status": "Main workflow passed in a user-run Windows Excel session; evidence files pending archiving",
+  "m3_status": "Main workflow verified in the original Windows session; reviewed workbook inspected and rendered; revised styling checked separately",
   "m4_status": "Published with hosted CI verified",
   "python_version": "3.11.18",
   "pytest": {
@@ -56,7 +56,7 @@
   "workbook": {
     "synthetic": true,
     "workbook": "doctree_report.xlsx",
-    "workbook_sha256": "60988acfe0b9959609ae8d6ecd4c3bc34ee5aa6bcc4e2d1312150acc32cc952d",
+    "workbook_sha256": "bbecebc4ad34a54c0b4fbafda0edfd03ce5ac5f4cb9e825bb744b44d87a4df04",
     "header_row": 5,
     "data_rows": {
       "Summary": null,
@@ -74,7 +74,7 @@
       "ChangeLogTable": 16
     },
     "source_sha256": {
-      "summary.json": "bbeb14188b226db23b01d3b80de00b624fa688856d9e2a85f69b1f046b9f647e",
+      "summary.json": "3c47cf6e24f024dbc8b69697bd3481641f4b988ee419373d035f2425dd152df2",
       "issues.csv": "d2b55c1767c1816e587497711740bb6f53ba29ba7f3fa19b4838effd36e932f1",
       "manual_review.csv": "8f9b1fa10d6e58da8cea1473f6bebdac246e930a89ecfa2de85c07673de69b2d",
       "completeness.csv": "961a12252c63534bff824e9a21923bdb86d175e3ca509626847df415757310ff",
@@ -96,7 +96,8 @@
     "test_date": "2026-11-15",
     "evidence_basis": [
       "User report",
-      "Screenshots supplied in the project conversation"
+      "Screenshots supplied in the project conversation",
+      "Independent inspection of supplied macro-enabled workbook"
     ],
     "performed_in": "User's Windows desktop Excel session",
     "environment": {
@@ -109,10 +110,10 @@
       "local_timezone": null
     },
     "module_source_sha256": "1df2bf0301f42a1b796375dd20608f8cda9334f2376960e1bb1c3bba721a4f78",
-    "review_copy_received": false,
-    "review_copy_filename": null,
-    "review_copy_module_hash": null,
-    "tested_report_note": "Screenshots show an earlier report with letter-based System names. The current generated report uses numeric System names; the supplied module source is unchanged.",
+    "review_copy_received": true,
+    "review_copy_filename": "doctree_review.xlsm",
+    "review_copy_module_hash": "13663411543b5b6e31b28353f0868c276079ecd60056c2093ed7bf13576c6cf9",
+    "tested_report_note": "User tested an earlier letter-labelled report. The supplied embedded source matches the originally published module; the current exported revision changes presentation only.",
     "checks": {
       "compile": {
         "status": "passed_user_report",
@@ -170,15 +171,44 @@
     "public_evidence_handling": {
       "excel_about_image": "Not published; only product version, build and bitness were transcribed",
       "earlier_system_summary_image": "Not published; numeric counts were transcribed without old System names",
-      "raw_image_files": "Awaiting file attachments for repository archiving"
+      "raw_image_files": "Rendered previews from the supplied workbook archived with source provenance; original screenshot files are not required"
     },
     "limitations": [
-      "The reviewed workbook binary was not supplied for independent inspection",
-      "Screenshots and user reports establish this manual session, not execution in CI",
+      "The original main macro workflow was verified in Windows; subsequent presentation-only code changes were syntax checked and rendered but not rerun in Windows",
       "Extra selection and cancellation cases were not separately itemized"
-    ]
+    ],
+    "review_copy_sha256": "010d3245ccdcbeba29d5e2799b161692d2f579fe5df5e9c34168ab4b5bde3706",
+    "review_copy_vba_binary_sha256": "d0ce95c285c4cdbada934a962d688ad77ed8688be81795897a8711229476c1b1",
+    "rendered_previews_archived": true,
+    "current_style_update": {
+      "source_sha256": "7bc5442e1bcf0e9ab5e899d42c4bca5fa65acd3f7b84aec73b6199d938b8bac8",
+      "review_logic_unchanged": true,
+      "changed_procedures": [
+        "HighlightIssues",
+        "BuildSystemSummary"
+      ],
+      "system_counting_code_unchanged": true,
+      "mark_reviewed_code_unchanged": true,
+      "windows_runtime_status": "Revised presentation code has not been rerun in Windows",
+      "user_copy_embedded_vba": "Tested original binary retained; import current .bas to change future generated styling"
+    },
+    "binary_inspection": {
+      "issues": 200,
+      "open_findings": 199,
+      "dismissed_findings": 1,
+      "change_log_rows": 23,
+      "review_changes": 7,
+      "all_issue_source_metadata_matches_baseline": true,
+      "total_matches_system_rows": true,
+      "macro_source_comparison": "Matches tested published module after newline normalization and editor capitalization of Index, Name and Color properties",
+      "review_snapshot": "reports/reviewed_snapshot.xlsx",
+      "preview_images": [
+        "docs/screenshots/issues_review.png",
+        "docs/screenshots/manual_review.png",
+        "docs/screenshots/review_audit.png",
+        "docs/screenshots/system_summary.png"
+      ]
+    }
   },
-  "incomplete": [
-    "Archive approved Windows Excel screenshot files"
-  ]
+  "incomplete": []
 }

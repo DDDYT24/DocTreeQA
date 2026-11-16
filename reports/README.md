@@ -34,9 +34,11 @@ reference values for a later Windows Excel test, not VBA execution results.
 `windows_excel_acceptance.json` records a user-run Windows desktop Excel session
 supported by supplied screenshots and a written report.
 `windows_review_observed.csv` transcribes numeric System counts after rejection.
-The main workflow passed; extra selection and cancellation cases were not
-individually documented. The workbook binary and original screenshot files
-remain unavailable for repository archiving and binary inspection.
+The supplied workbook binary was independently inspected after the main workflow
+passed. Extra selection and cancellation cases were not individually documented.
+`reviewed_snapshot.xlsx` is a macro-free presentation copy; the manifest records
+its source hash and the formatting/name changes. Four rendered views illustrate
+its saved review state. The original macro-enabled input is not published.
 
 The generated macro-free workbook and Python reference files describe the
 baseline dataset. They do not contain the user's review edits. The cloud

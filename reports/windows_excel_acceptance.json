@@ -2,7 +2,11 @@
   "status": "main_workflow_passed",
   "main_workflow_passed": true,
   "test_date": "2026-11-15",
-  "evidence_basis": ["User report", "Screenshots supplied in the project conversation"],
+  "evidence_basis": [
+    "User report",
+    "Screenshots supplied in the project conversation",
+    "Independent inspection of supplied macro-enabled workbook"
+  ],
   "performed_in": "User's Windows desktop Excel session",
   "environment": {
     "operating_system": "Windows",
@@ -14,18 +18,39 @@
     "local_timezone": null
   },
   "module_source_sha256": "1df2bf0301f42a1b796375dd20608f8cda9334f2376960e1bb1c3bba721a4f78",
-  "review_copy_received": false,
-  "review_copy_filename": null,
-  "review_copy_module_hash": null,
-  "tested_report_note": "Screenshots show an earlier report with letter-based System names. The current generated report uses numeric System names; the supplied module source is unchanged.",
+  "review_copy_received": true,
+  "review_copy_filename": "doctree_review.xlsm",
+  "review_copy_module_hash": "13663411543b5b6e31b28353f0868c276079ecd60056c2093ed7bf13576c6cf9",
+  "tested_report_note": "User tested an earlier letter-labelled report. The supplied embedded source matches the originally published module; the current exported revision changes presentation only.",
   "checks": {
-    "compile": {"status": "passed_user_report", "observation": "Compile VBAProject produced no error; the macros subsequently ran"},
-    "highlight_issues": {"status": "passed_screenshot", "observation": "Success dialog, coloured issue rows and filter arrows are visible"},
-    "build_system_summary": {"status": "passed_screenshot", "observation": "System counts total 199 after the first finding was dismissed"},
-    "accepted_decision": {"status": "passed_screenshot_log", "observation": "Change Log records Pending to Accepted, populated initials and a local timestamp"},
-    "rejected_decision": {"status": "passed_screenshot_log", "observation": "Change Log records Accepted to Rejected and both review statuses changing from Open to Dismissed"},
-    "manual_review_status": {"status": "passed_user_report", "observation": "User confirmed P6 matches the expected dismissed status"},
-    "save_and_reopen": {"status": "passed_user_report", "observation": "User confirmed that rebuilding the summary after reopening still produces 199"}
+    "compile": {
+      "status": "passed_user_report",
+      "observation": "Compile VBAProject produced no error; the macros subsequently ran"
+    },
+    "highlight_issues": {
+      "status": "passed_screenshot",
+      "observation": "Success dialog, coloured issue rows and filter arrows are visible"
+    },
+    "build_system_summary": {
+      "status": "passed_screenshot",
+      "observation": "System counts total 199 after the first finding was dismissed"
+    },
+    "accepted_decision": {
+      "status": "passed_screenshot_log",
+      "observation": "Change Log records Pending to Accepted, populated initials and a local timestamp"
+    },
+    "rejected_decision": {
+      "status": "passed_screenshot_log",
+      "observation": "Change Log records Accepted to Rejected and both review statuses changing from Open to Dismissed"
+    },
+    "manual_review_status": {
+      "status": "passed_user_report",
+      "observation": "User confirmed P6 matches the expected dismissed status"
+    },
+    "save_and_reopen": {
+      "status": "passed_user_report",
+      "observation": "User confirmed that rebuilding the summary after reopening still produces 199"
+    }
   },
   "observed_review": {
     "review_id": "REV-000001",
@@ -54,11 +79,42 @@
   "public_evidence_handling": {
     "excel_about_image": "Not published; only product version, build and bitness were transcribed",
     "earlier_system_summary_image": "Not published; numeric counts were transcribed without old System names",
-    "raw_image_files": "Awaiting file attachments for repository archiving"
+    "raw_image_files": "Rendered previews from the supplied workbook archived with source provenance; original screenshot files are not required"
   },
   "limitations": [
-    "The reviewed workbook binary was not supplied for independent inspection",
-    "Screenshots and user reports establish this manual session, not execution in CI",
+    "The original main macro workflow was verified in Windows; subsequent presentation-only code changes were syntax checked and rendered but not rerun in Windows",
     "Extra selection and cancellation cases were not separately itemized"
-  ]
+  ],
+  "review_copy_sha256": "010d3245ccdcbeba29d5e2799b161692d2f579fe5df5e9c34168ab4b5bde3706",
+  "review_copy_vba_binary_sha256": "d0ce95c285c4cdbada934a962d688ad77ed8688be81795897a8711229476c1b1",
+  "rendered_previews_archived": true,
+  "current_style_update": {
+    "source_sha256": "7bc5442e1bcf0e9ab5e899d42c4bca5fa65acd3f7b84aec73b6199d938b8bac8",
+    "review_logic_unchanged": true,
+    "changed_procedures": [
+      "HighlightIssues",
+      "BuildSystemSummary"
+    ],
+    "system_counting_code_unchanged": true,
+    "mark_reviewed_code_unchanged": true,
+    "windows_runtime_status": "Revised presentation code has not been rerun in Windows",
+    "user_copy_embedded_vba": "Tested original binary retained; import current .bas to change future generated styling"
+  },
+  "binary_inspection": {
+    "issues": 200,
+    "open_findings": 199,
+    "dismissed_findings": 1,
+    "change_log_rows": 23,
+    "review_changes": 7,
+    "all_issue_source_metadata_matches_baseline": true,
+    "total_matches_system_rows": true,
+    "macro_source_comparison": "Matches tested published module after newline normalization and editor capitalization of Index, Name and Color properties",
+    "review_snapshot": "reports/reviewed_snapshot.xlsx",
+    "preview_images": [
+      "docs/screenshots/issues_review.png",
+      "docs/screenshots/manual_review.png",
+      "docs/screenshots/review_audit.png",
+      "docs/screenshots/system_summary.png"
+    ]
+  }
 }

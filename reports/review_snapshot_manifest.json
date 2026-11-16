@@ -1,0 +1,336 @@
+{
+  "source_filename": "doctree_review.xlsm",
+  "source_sha256": "010d3245ccdcbeba29d5e2799b161692d2f579fe5df5e9c34168ab4b5bde3706",
+  "source_vba_sha256": "d0ce95c285c4cdbada934a962d688ad77ed8688be81795897a8711229476c1b1",
+  "source_unchanged": true,
+  "snapshot": "reviewed_snapshot.xlsx",
+  "snapshot_sha256": "79d86bab0be675e62739701e9de7357337633220ff542c1aabb11575dfc70f76",
+  "snapshot_contains_macros": false,
+  "styled_copy_vba_preserved": true,
+  "renamed_system_labels": [
+    {
+      "sheet": "Completeness",
+      "code": "200",
+      "after": "Fictional System 001"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "210",
+      "after": "Fictional System 002"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "220",
+      "after": "Fictional System 003"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "230",
+      "after": "Fictional System 004"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "240",
+      "after": "Fictional System 005"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "250",
+      "after": "Fictional System 006"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "260",
+      "after": "Fictional System 007"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "270",
+      "after": "Fictional System 008"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "280",
+      "after": "Fictional System 009"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "290",
+      "after": "Fictional System 010"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "300",
+      "after": "Fictional System 011"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "310",
+      "after": "Fictional System 012"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "320",
+      "after": "Fictional System 013"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "330",
+      "after": "Fictional System 014"
+    },
+    {
+      "sheet": "Completeness",
+      "code": "340",
+      "after": "Fictional System 015"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "200",
+      "after": "Fictional System 001"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "210",
+      "after": "Fictional System 002"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "220",
+      "after": "Fictional System 003"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "230",
+      "after": "Fictional System 004"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "240",
+      "after": "Fictional System 005"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "250",
+      "after": "Fictional System 006"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "260",
+      "after": "Fictional System 007"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "270",
+      "after": "Fictional System 008"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "280",
+      "after": "Fictional System 009"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "290",
+      "after": "Fictional System 010"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "300",
+      "after": "Fictional System 011"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "310",
+      "after": "Fictional System 012"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "320",
+      "after": "Fictional System 013"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "330",
+      "after": "Fictional System 014"
+    },
+    {
+      "sheet": "System Summary",
+      "code": "340",
+      "after": "Fictional System 015"
+    }
+  ],
+  "value_changes": [
+    {
+      "sheet": "Summary",
+      "cell": "A67",
+      "after": "For the recorded Windows Excel session, see docs/windows_acceptance.md."
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D6",
+      "after": "Fictional System 001"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D35",
+      "after": "Fictional System 002"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D64",
+      "after": "Fictional System 003"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D93",
+      "after": "Fictional System 004"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D122",
+      "after": "Fictional System 005"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D151",
+      "after": "Fictional System 006"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D173",
+      "after": "Fictional System 007"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D195",
+      "after": "Fictional System 008"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D217",
+      "after": "Fictional System 009"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D239",
+      "after": "Fictional System 010"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D261",
+      "after": "Fictional System 011"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D283",
+      "after": "Fictional System 012"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D305",
+      "after": "Fictional System 013"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D327",
+      "after": "Fictional System 014"
+    },
+    {
+      "sheet": "Completeness",
+      "cell": "D349",
+      "after": "Fictional System 015"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B6",
+      "after": "Fictional System 001"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B7",
+      "after": "Fictional System 002"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B8",
+      "after": "Fictional System 003"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B9",
+      "after": "Fictional System 004"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B10",
+      "after": "Fictional System 005"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B11",
+      "after": "Fictional System 006"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B12",
+      "after": "Fictional System 007"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B13",
+      "after": "Fictional System 008"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B14",
+      "after": "Fictional System 009"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B15",
+      "after": "Fictional System 010"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B16",
+      "after": "Fictional System 011"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B17",
+      "after": "Fictional System 012"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B18",
+      "after": "Fictional System 013"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B19",
+      "after": "Fictional System 014"
+    },
+    {
+      "sheet": "System Summary",
+      "cell": "B20",
+      "after": "Fictional System 015"
+    }
+  ],
+  "retained_review": {
+    "decision": "Rejected",
+    "status": "Dismissed",
+    "open_total": 199,
+    "log_rows": 23
+  },
+  "presentation": "White background, black text and thin black borders; warning/error hints retained",
+  "privacy": "Personal document properties removed; original macro-enabled workbook not published",
+  "rendering": "Selected ranges from the reviewed snapshot; not a new Windows macro execution",
+  "embedded_module_note": "Styled user copy retains the tested original macro; import the updated .bas for future plain summaries",
+  "blank_cell_note": "Empty text cells may roundtrip as blank cells",
+  "preview_images": {
+    "docs/screenshots/issues_review.png": "1cc917aeac04f5379e12fdaec6d261a4b5e91d8c4dcee0cdeba5fa7d8a9b644b",
+    "docs/screenshots/manual_review.png": "a340a2844f7c0eba1fa4c8624979fbde6eb711f3c7a88d0d14d6f118f400f45d",
+    "docs/screenshots/review_audit.png": "b0ca30589814e785d645743dacca804267b3f7fa8a2c216d3156f6d58a426ce2",
+    "docs/screenshots/system_summary.png": "871faed347d372520480c7a1bfb797e71b5f90d7d5281b3668eec4b6938f5081"
+  }
+}

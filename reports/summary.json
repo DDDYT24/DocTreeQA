@@ -54,6 +54,6 @@
     "injected_errors.csv": "793b8b1487525b9984553232d0baf621eefd360dfcae5a1553804c464a25aeb7"
   },
   "scoring_available": true,
-  "runtime_seconds": 0.073129,
+  "runtime_seconds": 0.062144,
   "runtime_scope": "Input load, detection, CSV export and scoring; excludes summary write"
 }

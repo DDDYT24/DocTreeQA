@@ -10,7 +10,7 @@ from tempfile import NamedTemporaryFile
 from openpyxl import Workbook
 from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
 from openpyxl.formatting.rule import DataBarRule
-from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter, range_boundaries
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.pagebreak import Break
@@ -30,8 +30,14 @@ MANUAL_FIELDS = [
     "reviewed_at",
     *ISSUE_FIELDS,
 ]
-NAVY, TEAL, WHITE = "18354A", "176B75", "FFFFFF"
-SEVERITY_COLORS = {"error": "FCE4D6", "warning": "FFF2CC", "info": "DDEBF7"}
+BLACK, WHITE, LIGHT_GRAY = "000000", "FFFFFF", "F2F2F2"
+TABLE_BORDER = Border(
+    left=Side(style="thin", color=BLACK),
+    right=Side(style="thin", color=BLACK),
+    top=Side(style="thin", color=BLACK),
+    bottom=Side(style="thin", color=BLACK),
+)
+SEVERITY_COLORS = {"error": "FCE4D6", "warning": "FFF2CC", "info": "E7E6E6"}
 
 
 def _value(cell, value):
@@ -53,12 +59,14 @@ def _banner(ws, title, note, columns):
     _value(ws.cell(1, 1), title)
     _value(ws.cell(2, 1), "SYNTHETIC DATA ONLY | Fictional metadata; no real ship or Seaspan data")
     _value(ws.cell(3, 1), note)
-    ws.cell(1, 1).font = Font(name="Calibri", size=20, bold=True, color=WHITE)
-    ws.cell(1, 1).fill = PatternFill("solid", fgColor=NAVY)
-    ws.cell(2, 1).font = Font(name="Calibri", size=11, bold=True, color=TEAL)
-    ws.cell(3, 1).font = Font(name="Calibri", size=10, color="485C68")
+    ws.cell(1, 1).font = Font(name="Calibri", size=20, bold=True, color=BLACK)
+    ws.cell(1, 1).fill = PatternFill("solid", fgColor=WHITE)
+    ws.cell(2, 1).font = Font(name="Calibri", size=11, bold=True, color=BLACK)
+    ws.cell(3, 1).font = Font(name="Calibri", size=10, color=BLACK)
     for row in (1, 2, 3):
         ws.cell(row, 1).alignment = Alignment(vertical="center", wrap_text=True)
+    for cell in ws[1][:end]:
+        cell.border = TABLE_BORDER
     ws.row_dimensions[1].height = 36
     ws.row_dimensions[2].height = 24
     ws.row_dimensions[3].height = 32
@@ -71,31 +79,34 @@ def _banner(ws, title, note, columns):
     ws.page_setup.fitToHeight = 0
     ws.print_title_rows = "1:5"
     ws.oddFooter.center.text = "SYNTHETIC | DocTreeQA | Page &P of &N"
-    ws.sheet_properties.tabColor = TEAL
+    ws.sheet_properties.tabColor = BLACK
 
 
 def _table(ws, name, headers, rows, *, start_row=HEADER_ROW):
     for column, header in enumerate(headers, start=1):
         cell = ws.cell(start_row, column)
         _value(cell, header)
-        cell.font = Font(name="Calibri", size=11, bold=True, color=WHITE)
-        cell.fill = PatternFill("solid", fgColor=NAVY)
+        cell.font = Font(name="Calibri", size=11, bold=True, color=BLACK)
+        cell.fill = PatternFill("solid", fgColor=LIGHT_GRAY)
+        cell.border = TABLE_BORDER
         cell.alignment = Alignment(vertical="center", wrap_text=True)
     ws.row_dimensions[start_row].height = 28
     for row_index, record in enumerate(rows, start=start_row + 1):
         for column, header in enumerate(headers, start=1):
             cell = ws.cell(row_index, column)
             _value(cell, record[header])
-            cell.font = Font(name="Calibri", size=11, color=NAVY)
+            cell.font = Font(name="Calibri", size=11, color=BLACK)
+            cell.fill = PatternFill("solid", fgColor=WHITE)
+            cell.border = TABLE_BORDER
             cell.alignment = Alignment(vertical="top", wrap_text=True)
         ws.row_dimensions[row_index].height = 32
     ref = f"A{start_row}:{get_column_letter(len(headers))}{start_row + len(rows)}"
     table = Table(displayName=name, ref=ref)
     table.tableStyleInfo = TableStyleInfo(
-        name="TableStyleMedium2",
+        name="TableStyleLight1",
         showFirstColumn=False,
         showLastColumn=False,
-        showRowStripes=True,
+        showRowStripes=False,
         showColumnStripes=False,
     )
     ws.add_table(table)
@@ -260,7 +271,7 @@ def _summary(ws, summary, scoring):
             for rule, count in summary["issues_per_rule"].items()
         ]
     _value(ws.cell(start - 1, 1), "Per-rule findings and controlled synthetic scoring")
-    ws.cell(start - 1, 1).font = Font(bold=True, color=TEAL, size=12)
+    ws.cell(start - 1, 1).font = Font(bold=True, color=BLACK, size=12)
     _table(
         ws,
         "RuleMetrics",
@@ -288,7 +299,7 @@ def _summary(ws, summary, scoring):
         ws.merge_cells(start_row=index, start_column=1, end_row=index, end_column=5)
         _value(ws.cell(index, 1), note)
         ws.cell(index, 1).alignment = Alignment(wrap_text=True, vertical="center")
-        ws.cell(index, 1).font = Font(name="Calibri", size=10, color="485C68")
+        ws.cell(index, 1).font = Font(name="Calibri", size=10, color=BLACK)
         ws.row_dimensions[index].height = 28
     for column, width in {"A": 39, "B": 22, "C": 58, "D": 18, "E": 18}.items():
         ws.column_dimensions[column].width = width
@@ -396,13 +407,13 @@ def build_report(config: Config, *, force: bool = False) -> dict:
                 ws.cell(index, percent_column).number_format = "0.00%"
                 if record["level"] in {"System", "Subsystem"}:
                     for cell in ws[index][: len(headers)]:
-                        cell.font = Font(name="Calibri", bold=True, color=NAVY)
+                        cell.font = Font(name="Calibri", bold=True, color=BLACK)
                         cell.fill = PatternFill(
-                            "solid", fgColor=("DCECF1" if record["level"] == "System" else "EDF3F5")
+                            "solid", fgColor=("E7E7E7" if record["level"] == "System" else "F2F2F2")
                         )
                 if record["missing_count"]:
                     ws.cell(index, headers.index("missing_count") + 1).font = Font(
-                        color="A82020", bold=True
+                        color=BLACK, bold=True
                     )
             if hierarchy:
                 column = get_column_letter(COMPLETENESS_FIELDS.index("completeness_pct") + 1)
@@ -413,7 +424,7 @@ def build_report(config: Config, *, force: bool = False) -> dict:
                         start_value=0,
                         end_type="num",
                         end_value=1,
-                        color="5FACA0",
+                        color="A6A6A6",
                         showValue=True,
                     ),
                 )
