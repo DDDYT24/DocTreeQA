@@ -281,7 +281,7 @@ def _summary(ws, summary, scoring):
         "Shared file names and title similarity are candidates for manual review, "
         "not proof of content.",
         "Use the VBA module from vba/DocTreeQA.bas in a separately saved .xlsm review copy.",
-        "VBA has not been executed in Windows Excel in this cloud delivery.",
+        "For Windows Excel runtime evidence, see docs/windows_acceptance.md.",
     ]
     note_start = start + len(score_rows) + 3
     for index, note in enumerate(notes, start=note_start):
@@ -455,7 +455,9 @@ def build_report(config: Config, *, force: bool = False) -> dict:
             name: hashlib.sha256((output / name).read_bytes()).hexdigest() for name in sources
         },
         vba_included=False,
-        vba_execution_status="Not run; Windows Excel validation required",
+        vba_execution_status=(
+            "Macro-free workbook; review-copy runtime evidence is recorded separately"
+        ),
         review_semantics={"Accepted": "Open", "Rejected": "Dismissed"},
     )
     write_json(output / "workbook_manifest.json", manifest)

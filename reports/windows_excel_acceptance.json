@@ -1,0 +1,64 @@
+{
+  "status": "main_workflow_passed",
+  "main_workflow_passed": true,
+  "test_date": "2026-11-15",
+  "evidence_basis": ["User report", "Screenshots supplied in the project conversation"],
+  "performed_in": "User's Windows desktop Excel session",
+  "environment": {
+    "operating_system": "Windows",
+    "windows_version": null,
+    "excel_product": "Microsoft Excel for Microsoft 365 MSO",
+    "excel_version": "2610",
+    "excel_build": "16.0.20527.20196",
+    "excel_bitness": 64,
+    "local_timezone": null
+  },
+  "module_source_sha256": "1df2bf0301f42a1b796375dd20608f8cda9334f2376960e1bb1c3bba721a4f78",
+  "review_copy_received": false,
+  "review_copy_filename": null,
+  "review_copy_module_hash": null,
+  "tested_report_note": "Screenshots show an earlier report with letter-based System names. The current generated report uses numeric System names; the supplied module source is unchanged.",
+  "checks": {
+    "compile": {"status": "passed_user_report", "observation": "Compile VBAProject produced no error; the macros subsequently ran"},
+    "highlight_issues": {"status": "passed_screenshot", "observation": "Success dialog, coloured issue rows and filter arrows are visible"},
+    "build_system_summary": {"status": "passed_screenshot", "observation": "System counts total 199 after the first finding was dismissed"},
+    "accepted_decision": {"status": "passed_screenshot_log", "observation": "Change Log records Pending to Accepted, populated initials and a local timestamp"},
+    "rejected_decision": {"status": "passed_screenshot_log", "observation": "Change Log records Accepted to Rejected and both review statuses changing from Open to Dismissed"},
+    "manual_review_status": {"status": "passed_user_report", "observation": "User confirmed P6 matches the expected dismissed status"},
+    "save_and_reopen": {"status": "passed_user_report", "observation": "User confirmed that rebuilding the summary after reopening still produces 199"}
+  },
+  "observed_review": {
+    "review_id": "REV-000001",
+    "row_id": "ROW-000023",
+    "doc_id": "SYN-000023",
+    "rule": "invalid_doc_type",
+    "system_code": "240",
+    "final_decision": "Rejected",
+    "final_review_status": "Dismissed",
+    "accepted_at_local": "2026-11-15 17:52:39",
+    "rejected_at_local": "2026-11-15 17:54:18",
+    "reviewer_initials_populated": true,
+    "review_log_rows_added": 7,
+    "open_findings_after_rejection": 199,
+    "open_findings_after_reopening": 199,
+    "unmapped_open_findings": 16
+  },
+  "additional_checks": {
+    "user_overall_report": "User reported that the remaining steps worked correctly",
+    "filtered_hidden_rows": "Not individually documented",
+    "cancellation": "Not individually documented",
+    "wrong_sheet_selection": "Not individually documented",
+    "repeat_summary_before_review": "Not individually documented"
+  },
+  "screenshot_files_archived": false,
+  "public_evidence_handling": {
+    "excel_about_image": "Not published; only product version, build and bitness were transcribed",
+    "earlier_system_summary_image": "Not published; numeric counts were transcribed without old System names",
+    "raw_image_files": "Awaiting file attachments for repository archiving"
+  },
+  "limitations": [
+    "The reviewed workbook binary was not supplied for independent inspection",
+    "Screenshots and user reports establish this manual session, not execution in CI",
+    "Extra selection and cancellation cases were not separately itemized"
+  ]
+}

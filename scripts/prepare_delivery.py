@@ -50,10 +50,10 @@ def main():
         if len(wrapped) > 2:
             raise ValueError("A bullet draft exceeds two lines at the selected text width")
         lines.append("\n".join(wrapped))
-    note = (
-        "DocTreeQA resume bullet drafts\n\n"
-        "Draft wording based on saved project outputs. VBA wording describes module "
-        "implementation; Windows Excel compilation and execution remain pending.\n\n"
+    note = "DocTreeQA resume bullet drafts\n\nDraft wording based on saved project outputs. " + (
+        "The main VBA workflow was verified in a user-run Windows Excel session.\n\n"
+        if "M3" in verification["milestones"]
+        else "Windows Excel compilation and execution remain pending.\n\n"
     )
     target = ROOT.parent / "DocTreeQA-resume-bullets.txt"
     target.write_text(

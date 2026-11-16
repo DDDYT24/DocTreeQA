@@ -67,7 +67,9 @@ def prepare(root: Path = ROOT) -> dict:
         after_accepting_first_row=total if first else None,
         after_rejecting_same_first_row=total - 1 if first else None,
         expected_severity_colours={"error": "FCE4D6", "warning": "FFF2CC", "info": "DDEBF7"},
-        vba_runtime_status="Not run; Windows Excel acceptance is pending",
+        vba_runtime_status=(
+            "Not run by this reference generator; observed runtime evidence is separate"
+        ),
     )
     (folder / "excel_acceptance_reference.json").write_text(json.dumps(reference, indent=2) + "\n")
     return reference

@@ -24,8 +24,9 @@ alongside the mutation that caused them.
 
 Outputs include CSV, JSON and an Excel review workbook. The command line,
 generator, validation, scoring and workbook export are implemented. The VBA
-module is written and has passed a grammar syntax check; compilation and
-execution in Windows Excel remain pending.
+module has passed a grammar syntax check and its main workflow has been verified
+in a user-run Windows Excel session. The observed results are recorded separately
+from the automated Python tests.
 
 ## Setup
 
@@ -118,7 +119,7 @@ equipment name, with required types listed in `data/required_docs.csv`.
 | Overall synthetic recall | 100.00% |
 | False positives | 0 |
 | False negatives | 0 |
-| Measured runtime, seconds | 0.065777 |
+| Measured runtime, seconds | 0.073129 |
 | Passing local pytest cases | 160 |
 | Workbook sheets | 5 |
 
@@ -208,9 +209,29 @@ using [the Windows Excel instructions](docs/excel_walkthrough.md).
 Python for comparison during that test; they are not proof that VBA ran.
 Record observed results in [the acceptance record](docs/windows_acceptance.md).
 
-The module has passed the recorded syntax check. Windows Excel compilation,
-macro execution and save/reopen verification are pending. Successful runtime
-operation must not be claimed until those steps have been observed.
+The user reported no compilation error and confirmed that the review status and
+summary persisted after reopening. Supplied screenshots show issue highlighting,
+Accepted and Rejected audit entries, matching dismissed statuses and the resulting
+System Summary. See [the recorded manual results](reports/windows_excel_acceptance.json)
+and [transcribed System counts](reports/windows_review_observed.csv).
+
+<!-- WINDOWS:START -->
+| Recorded Windows Excel result | Value |
+| --- | --- |
+| Test date | 2026-11-15 |
+| Excel version | 2610 |
+| Excel build | 16.0.20527.20196 |
+| Excel bitness | 64 |
+| Open findings after rejection | 199 |
+| Open findings after reopening | 199 |
+| Added review audit rows | 7 |
+<!-- WINDOWS:END -->
+
+This session used an earlier report with letter-based System names; the current
+generator uses numeric names. The module source is unchanged. The reviewed
+workbook binary was not supplied, so no independent checksum of that copy is
+claimed. Additional selection and cancellation checks were reported successful
+overall but were not individually documented.
 
 ## Limitations
 
@@ -233,5 +254,8 @@ cloud. It checks workbook layout and does not show macro execution.
 
 ![Cloud-rendered workbook Summary preview](docs/screenshots/summary_cloud_preview.png)
 
-Windows Excel macro screenshots remain pending a manual run. No macro execution
-results or interface screenshots are simulated.
+User-supplied Windows Excel screenshots support the recorded manual run. Their
+original image files are pending safe repository archiving. The version dialog
+is not published; only the product version, build and bitness are transcribed.
+The earlier System Summary image is also excluded from public assets, with its
+numeric counts recorded separately. No interface screenshots are simulated.

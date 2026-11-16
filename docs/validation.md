@@ -39,13 +39,20 @@ review workflow. It checks language grammar only. It does not bind Excel object
 types, compile the project in Excel or execute any VBA behavior. Pytest also
 checks that macro table and column references exist in an actual workbook.
 
-## Windows Excel acceptance remains pending
+## Recorded Windows Excel acceptance
 
-The exported module and the import instructions are ready. The definitive VBA
-checks are **Debug > Compile VBAProject**, the macro behavior checks and a
-save/reopen check in desktop Excel on Windows. None has been observed in the
-cloud environment. Follow `excel_walkthrough.md` and record results in
-`windows_acceptance.md`.
+The user completed a desktop Excel session and supplied screenshots and a
+written report. The main workflow passed: no compile error was reported, issue
+highlighting ran, review decisions were logged, both matching statuses were
+dismissed on rejection, and the open total remained 199 after reopening.
+See `windows_acceptance.md` and `reports/windows_excel_acceptance.json`.
 
-Python reference counts allow an observer to compare the macro's System Summary
-with known expectations. They must not be described as macro execution evidence.
+The session was performed by the user, not in Python CI or this environment.
+The reviewed workbook binary and original image files were not supplied as
+workspace files. Additional selection and cancellation cases were reported
+successful overall but were not individually itemized. No stronger automated
+runtime or binary inspection claim is made.
+
+Python reference counts remain expectations, while the separately recorded
+Windows observations describe the actual reported session. The syntax check
+record's not-run fields refer to that grammar check, which never executes Excel.

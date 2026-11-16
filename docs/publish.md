@@ -29,5 +29,5 @@ uv run python scripts/prepare_delivery.py
 ```
 
 Keep personal `.xlsm` review copies local. They are ignored by Git. Windows
-Excel acceptance and real macro screenshots remain separate manual steps;
+Excel acceptance is recorded separately in `docs/windows_acceptance.md`;
 publication and a passing Python workflow do not establish VBA execution.

@@ -1,7 +1,7 @@
 {
   "synthetic": true,
   "meaning": "Python expectations for manual Windows Excel tests; not VBA execution evidence",
-  "workbook_sha256": "a54e040c2c0670e49880967cc71ab823ae7a1d80fbaf85a104c9b669b5777beb",
+  "workbook_sha256": "60988acfe0b9959609ae8d6ecd4c3bc34ee5aa6bcc4e2d1312150acc32cc952d",
   "initial_open_findings": 200,
   "initial_system_rows": 16,
   "initial_unmapped_open": 16,
@@ -19,5 +19,5 @@
     "warning": "FFF2CC",
     "info": "DDEBF7"
   },
-  "vba_runtime_status": "Not run; Windows Excel acceptance is pending"
+  "vba_runtime_status": "Not run by this reference generator; observed runtime evidence is separate"
 }

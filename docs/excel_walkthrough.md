@@ -4,6 +4,8 @@ This guide is for desktop Excel on Windows. The workbook is an `.xlsx` file
 without embedded macros. The exported module is `vba/DocTreeQA.bas`.
 Python checks and syntax validation do not establish that VBA runs in Excel.
 Complete and record the steps below before claiming Windows Excel validation.
+An observed user session is recorded in `windows_acceptance.md`; the steps
+remain available for repeating the checks on a fresh review copy.
 
 ## Open a review copy
 

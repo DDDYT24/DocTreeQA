@@ -1,7 +1,7 @@
 {
   "synthetic": true,
   "workbook": "doctree_report.xlsx",
-  "workbook_sha256": "a54e040c2c0670e49880967cc71ab823ae7a1d80fbaf85a104c9b669b5777beb",
+  "workbook_sha256": "60988acfe0b9959609ae8d6ecd4c3bc34ee5aa6bcc4e2d1312150acc32cc952d",
   "header_row": 5,
   "data_rows": {
     "Summary": null,
@@ -19,7 +19,7 @@
     "ChangeLogTable": 16
   },
   "source_sha256": {
-    "summary.json": "cf61765cb28994157fdad5fe8b81dd47035ef340c9967180f7a3a7593b1a3548",
+    "summary.json": "bbeb14188b226db23b01d3b80de00b624fa688856d9e2a85f69b1f046b9f647e",
     "issues.csv": "d2b55c1767c1816e587497711740bb6f53ba29ba7f3fa19b4838effd36e932f1",
     "manual_review.csv": "8f9b1fa10d6e58da8cea1473f6bebdac246e930a89ecfa2de85c07673de69b2d",
     "completeness.csv": "961a12252c63534bff824e9a21923bdb86d175e3ca509626847df415757310ff",
@@ -27,7 +27,7 @@
     "scoring.json": "64cb8f9954321f0e6ab3da3a77b5eb9de66567636faa2ffb5db8df6d2664a509"
   },
   "vba_included": false,
-  "vba_execution_status": "Not run; Windows Excel validation required",
+  "vba_execution_status": "Macro-free workbook; review-copy runtime evidence is recorded separately",
   "review_semantics": {
     "Accepted": "Open",
     "Rejected": "Dismissed"

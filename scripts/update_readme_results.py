@@ -45,19 +45,36 @@ def main():
     publication = json.loads(publication_path.read_text()) if publication_path.exists() else {}
     ci_path = REPORTS / "ci_status.json"
     ci = json.loads(ci_path.read_text()) if ci_path.exists() else {}
+    acceptance_path = REPORTS / "windows_excel_acceptance.json"
+    acceptance = json.loads(acceptance_path.read_text()) if acceptance_path.exists() else {}
+    runtime_confirmed = (
+        acceptance.get("main_workflow_passed") is True
+        and acceptance.get("module_source_sha256") == vba["module_sha256"]
+    )
     published = publication.get("status") == "published"
     ci_passed = ci.get("conclusion") == "success"
     milestones = ["M0", "M1", "M2"]
+    if runtime_confirmed:
+        milestones.append("M3")
     if published and ci_passed:
         milestones.append("M4")
-    incomplete = ["Windows Excel verification", "Windows Excel macro screenshots"]
+    incomplete = []
+    if not runtime_confirmed:
+        incomplete.append("Windows Excel verification")
+    if not acceptance.get("screenshot_files_archived"):
+        incomplete.append("Archive approved Windows Excel screenshot files")
     if not published:
         incomplete.append("Public GitHub publication")
     if not ci_passed:
         incomplete.append("Hosted GitHub Actions verification")
     verification = dict(
         milestones=milestones,
-        m3_status="Module implemented; static syntax passed; Windows Excel acceptance pending",
+        m3_status=(
+            "Main workflow passed in a user-run Windows Excel session; "
+            "evidence files pending archiving"
+            if runtime_confirmed
+            else "Module implemented; static syntax passed; Windows Excel acceptance pending"
+        ),
         m4_status=(
             "Published with hosted CI verified"
             if published and ci_passed
@@ -77,7 +94,12 @@ def main():
         publication=publication,
         workbook=workbook,
         vba_syntax_status=vba["status"],
-        vba_runtime_status="Not run; Windows Excel acceptance pending",
+        vba_runtime_status=(
+            "Main workflow passed by user report and supplied screenshots"
+            if runtime_confirmed
+            else "Not run; Windows Excel acceptance pending"
+        ),
+        windows_excel_acceptance=acceptance,
         incomplete=incomplete,
     )
     (REPORTS / "verification.json").write_text(json.dumps(verification, indent=2) + "\n")
@@ -132,6 +154,28 @@ def main():
     if count != 1:
         raise ValueError("Expected exactly one README results block")
     path.write_text(updated)
+    if runtime_confirmed and "<!-- WINDOWS:START -->" in updated:
+        environment = acceptance["environment"]
+        observed = acceptance["observed_review"]
+        windows_text = (
+            "| Recorded Windows Excel result | Value |\n| --- | --- |\n"
+            f"| Test date | {acceptance['test_date']} |\n"
+            f"| Excel version | {environment['excel_version']} |\n"
+            f"| Excel build | {environment['excel_build']} |\n"
+            f"| Excel bitness | {environment['excel_bitness']} |\n"
+            f"| Open findings after rejection | {observed['open_findings_after_rejection']} |\n"
+            f"| Open findings after reopening | {observed['open_findings_after_reopening']} |\n"
+            f"| Added review audit rows | {observed['review_log_rows_added']} |\n"
+        )
+        updated, count = re.subn(
+            r"<!-- WINDOWS:START -->.*?<!-- WINDOWS:END -->",
+            "<!-- WINDOWS:START -->\n" + windows_text + "<!-- WINDOWS:END -->",
+            updated,
+            flags=re.DOTALL,
+        )
+        if count != 1:
+            raise ValueError("Expected exactly one Windows acceptance results block")
+        path.write_text(updated)
 
 
 if __name__ == "__main__":

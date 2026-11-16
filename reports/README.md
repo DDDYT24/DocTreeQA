@@ -30,7 +30,15 @@ sheet row counts and review semantics are saved in `workbook_manifest.json`.
 `excel_acceptance_reference.json` and `system_summary_expected.csv` contain Python
 reference values for a later Windows Excel test, not VBA execution results.
 
-`vba_syntax_check.json` records grammar syntax validation only. The module has
-not been compiled or executed in Windows Excel. Follow the import instructions
-and fill the Windows acceptance record with observed results before claiming
-runtime validation. The cloud workbook preview checks layout only.
+`vba_syntax_check.json` records grammar syntax validation only.
+`windows_excel_acceptance.json` records a user-run Windows desktop Excel session
+supported by supplied screenshots and a written report.
+`windows_review_observed.csv` transcribes numeric System counts after rejection.
+The main workflow passed; extra selection and cancellation cases were not
+individually documented. The workbook binary and original screenshot files
+remain unavailable for repository archiving and binary inspection.
+
+The generated macro-free workbook and Python reference files describe the
+baseline dataset. They do not contain the user's review edits. The cloud
+workbook preview checks generated layout only. License and session identifiers
+are excluded from the public observations.
