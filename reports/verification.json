@@ -28,20 +28,20 @@
     "workflow": "checks",
     "event": "push",
     "branch": "main",
-    "head_sha": "28949e8fe722dbf5bcdda870b99787cab3bd1496",
-    "run_id": 43760482064,
-    "run_url": "https://github.com/DDDYT24/DocTreeQA/actions/runs/43760482064",
-    "job_id": 132953941726,
+    "head_sha": "936efaa91c62222aeb55c196e2b09ed29c868370",
+    "run_id": 43781091421,
+    "run_url": "https://github.com/DDDYT24/DocTreeQA/actions/runs/43781091421",
+    "job_id": 133018205159,
     "pytest": {
       "passed": 160,
-      "runtime_seconds": 11.8
+      "runtime_seconds": 13.34
     },
     "checks": [
       "ruff check .",
       "ruff format --check .",
       "pytest"
     ],
-    "scope": "Python tests and static workbook contracts; Windows Excel macros are not executed"
+    "scope": "Python tests and workbook style contracts; the revised VBA presentation code is not executed in CI"
   },
   "publication": {
     "status": "published",
